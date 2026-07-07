@@ -11,8 +11,8 @@ export const initiate = async (amount ,to_username,paymentform)=>{
         const secret = user.razerpaysecret
         const id= user.razorpayid
     var instance = new Razorpay({key_id:id, key_secret:secret})
-    console.log("keyid:",process.env.KEY_ID)
-console.log(process.env.KEY_SECRET)
+//     console.log("keyid:",process.env.KEY_ID)
+// console.log(process.env.KEY_SECRET)
     // await instance.orders.create({
     //     amount:50000,
     //     currency:"INR",
@@ -32,7 +32,7 @@ console.log(process.env.KEY_SECRET)
      x = await instance.orders.create(options)
     console.log(x)
     }catch(err){
-        console.log("ye error aa eahi he order create krne me",err)
+        // console.log("ye error aa eahi he order create krne me",err)
        throw new Error("Order creation failed")
     }
     // create a payment object which shows the pending payment in database
